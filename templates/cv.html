@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="{{url_for('static',filename='img')}}"
+  </head>
+  <style>
+        *{
+          padding: 0;
+          margin: 0;
+          font-family:'Poppins';
+        }
+        body{
+          background-color: rgb(255, 255, 255);
+        }
+        .header{
+          background-image: linear-gradient(to right, #30cfd0 0%, #5d00cf 100%);
+           width: 100%;
+           font-size: 24px;
+
+        }
+        .slide_base{
+            background-color: black;
+            color: white;
+        }
+        .btn1{
+          width:60px;
+          height: 50px;
+          font-size: 30px;
+          background: none;
+          border: none;
+          color: black;
+        }
+        .btn1:hover{
+          background-color: black;
+        }
+        .slide_op{
+          position: relative;
+          list-style: none;
+          font-size: 40px;
+          margin-bottom: 20px;
+        }
+        .slide_op div{
+          font-size: 25px;
+        }
+        .slide_head{
+          position: relative;
+          font-size: 30px;
+          left: 30px;
+        }
+        .navbar-brand{
+          font-size: 24px;
+        }
+        .row1{
+          background-image: linear-gradient(to right,#36d1dc , #5b86e5);
+          border-radius: 5px;
+          position: relative;
+          text-align: center;
+          margin-top:0px;
+          margin-bottom: 10px;
+        }
+        .row2{
+          background-color: aliceblue;
+          
+          position: relative;
+          text-align: center;
+          margin-top:0px;
+          margin-bottom: 10px;
+        }
+        .nav_op{
+          font-size: 50px;
+          position: relative;
+          margin-left: -25px;
+          background-color: black;
+          border-radius: 8px;
+          color: aliceblue;
+          transition: 0.5s;
+        }
+        .nav_op:hover{
+          background-color: rgb(0, 136, 255);
+          color: aliceblue;
+        }
+        .nav_op .btn{
+          color: aliceblue;
+        }
+
+        .container{
+          background-color: white;
+        }
+        .logo{
+          width: 60px;
+          height: 60px;
+          border-radius: 50px;
+          position: relative;
+        }
+        .my_pic{
+          border-radius: 100px;
+          position: relative;
+          margin-top: 20px;
+          margin-right: 22px;
+          height: 190px;
+          width: 190px;
+          margin-bottom: 66px;
+        }
+      
+        .gath img,a{
+          position: relative;
+          margin-left: 5px;
+        }
+        .col h1{
+          margin: 30px;
+          color: black;
+          font-size: 30px;
+        }
+        .img2{ 
+          position: relative;
+          padding-left: 35px;
+          margin-bottom: 10px;
+          width: 100%;
+          height: 200px;
+          background-color: white;
+        }
+        .col h2{
+          color: black;
+          margin-top: 30px;
+          margin-left: 160px;
+          margin-right: 160px;
+          margin-bottom: 80px;
+          font-size: 20px
+        }
+        .welcome{
+          font-size: 60px;
+          margin-top: 30px;
+        }
+        .dom{
+          margin-bottom: 10px;
+          margin-left:50px;
+          margin-right: 50px;
+          border: 1px rgb(175, 175, 175);
+          border-radius: 6px;
+          box-shadow: 5px 0px 5px rgb(175, 175, 175);
+          margin-top: -35px;
+          z-index: 1;
+          background-color: white;
+        }
+        .foot{
+          background-color: black;
+          width: 100%;
+          text-align: left;
+        }
+        .foot h2{
+          color: white;
+          font-size: 30px;
+          margin-left: 7px;
+          margin-bottom: 5px;
+        }
+        .foot h3{
+          margin-left: 7px;
+          color: white;
+        }
+        .foot_op{
+          align-content: center;
+        }
+        .f1,.f2,.f3,.f4{
+          margin-top: 45px;
+          margin-bottom: 45px;
+          margin-left: 70px;
+          margin-left: 70px;
+          font-size: 30px;
+          height: 60px;
+          width: 60px;
+          border-radius: 50px;
+          transition: 0.3s;
+        }
+        .f1:hover{
+
+          background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+          color: white;
+        }
+        .f2:hover{
+          
+          background-color: rgb(10, 102, 194);
+          color: white;
+        }
+        .f3:hover{
+      
+          background-color: #6e5494;
+          color: white;
+        }
+        .f4:hover{
+          background-color:white;
+          color: red;
+        }
+        .foot h2{
+          margin-left: 200px;
+        }
+        .resumee{
+
+       background-color: black;
+          color: white;
+          font-style: none;
+          transition: 0.3s;
+        }
+        .resumee a{
+          color: white;
+          text-decoration: none;
+        }
+        .resumee a i{
+          margin-top: 4px;
+          margin-right: 10px;
+        }
+        .resumee:hover{
+          background-color: white;
+          
+        }
+        .resumee a:hover{
+          color: black;
+        }
+        .tag{
+          
+          text-align: left;
+        }
+        .a{
+          background-color: #000000;
+          color: white;
+          width: 100px;
+        }
+        .b1{
+          
+          border-radius: 6px;
+          background-color: #0c7bfa;
+        }
+        .b2{
+          border-radius: 6px;
+          background-color: #0c7bfa;
+        }
+        .b3{
+         border-radius: 6px;
+          background-color: #0c7bfa;
+        }
+        #b4{
+          border-radius: 6px;
+          transition: 3s;
+          background-color: #0c7bfa;
+        }
+        #b5{
+          border-radius: 6px;
+         background-color: #0c7bfa;
+        }
+        @keyframes ani{
+          0%{
+            width: 0;
+          }
+          100%{
+            width: 100%;
+          }
+          
+        }
+        .emp{
+          padding-left: 70px;
+          padding-right: 70px;
+        }
+        .hidden{
+          opacity: 0;
+          transition: 1.5s all;
+          
+        }
+        .show{
+          opacity: 1;
+        }
+        .hidden1{
+          width:0;
+          transition: 1.5s all;
+        }
+        .show1{
+          width: 70%;
+        }
+        .hidden2{
+          width: 0;
+          transition: 1.5s all;
+        }
+        .show2{
+          width: 90%;
+        }
+        .hidden3{
+          width: 0;
+          transition: 2s all;
+        }
+        .show3{
+          width:95%
+        }
+        .hidden4{
+          width: 0;
+          transition: 2s all;
+        }
+        .show4{
+          width: 90%;
+        }
+        .hidden5{
+          width: 0;
+          transition: 2s all;
+        }
+        .show5{
+          width: 50%;
+        }
+        .con{
+          text-decoration: none;
+        }
+  </style>
+  <body>
+    <div class="header">
+    <nav class="navbar navbar-expand-lg ">
+
+        <div class="gath">
+          <button class="btn btn-dark btn1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class='bx bx-menu'></i></button>
+          <img class="logo" src="https://t4.ftcdn.net/jpg/01/33/14/91/360_F_133149161_cZzY9SYCE9FjMOwMGRJ26W8OqMZx1opU.jpg" alt="">
+          <a class="navbar-brand" href="#">Zakfolio</a>
+          <span class="res">
+          <button type="button" class="btn resumee btn-outline-success"><a href=""><i class='bx bxs-briefcase'></i>Resume</a></button>
+          </span>
+          
+        </div>
+      </nav>
+      </div>
+    </div>
+    <div class="offcanvas offcanvas-start slide_base" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title slide_head" id="offcanvasWithBothOptionsLabel">Home</h5>
+          
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="slide_op">
+            <form action="/proj" method="post">
+            <li class="nav-item nav_op">
+              
+                <button  type="submit" class="btn"><i class='bx bx-code-alt'></i>&nbsp; &nbsp; Project</button>
+              </form>
+            </li>
+            <form action="/assign" method="post">
+            <li class="nav-item nav_op">
+              <button type="submit" class="btn"><i class='bx bxs-copy-alt'></i>&nbsp; &nbsp; Assignments</button>
+            </li>
+            </form>
+            <li class="nav-item nav_op">
+              <button type="submit" class="btn"><i class='bx bx-trophy'></i>&nbsp; &nbsp; Achievments</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="text-center">
+        <div class="row">
+          <div class="con">
+          <div class="col">
+            <div class="hidden">
+            <center><h1 class="welcome">Welcome to my Portfolio website</h1></center>
+          </div>
+            <img class="my_pic" src="{{url_for('static',filename='img/zakpic.jpg')}}" alt="error">
+            </div>
+          </div>
+       
+        </div>
+        <div class="row row1">
+          <div class="col">
+            <center><img class="img2" src="https://mattfarley.ca/img/hero-devices.svg" alt=""></center>
+            <div class="hidden">
+            <h1>Hi,I'm Mohd Zakie Khan.</h2>
+            <h2>I'm a Front-End Web-Devloper.I also have a keen intrest in becoming a Data Scientist.Just an student who is a fresher and is has intrest in learning new things in field of Tech.<br><br>
+            Currently pursuing Mtech(IT) in Davv University at Department <br> <b>Internation Institute of Professional Studies</b>,Indore</h2>
+          </div>
+          </div>
+        </div>
+        <div class="row ">
+          <div class="col dom">
+                <h1>Domain's worked on</h1>
+                
+                <div class="flex flex-50-gt-sm waypoint bars-wrap animated comp slide-in-right .container-lg" data-animation="slide-in-right">
+                  <div class="bar flex emp">
+                    
+                    <div class="bar fill b1 hidden3">
+                      <div class="tag bold flex a"><center>Python</center></div>
+                      
+                    </div>
+                    <br>
+                  </div>
+    
+                  <div class="bar flex emp">
+                    <div class="bar fill b2 bor hidden4">
+                      <div class="tag bold flex a"><center>CSS</center></div>
+                      
+                    </div>
+                    <br>
+                  </div>
+    
+                  <div class="bar flex emp">
+                    <div class="bar fill b3 hidden2" >
+                      <div class="tag bold flex a"><center>HTML</center></div>
+                    </div>
+                    <br>
+                  </div>
+    
+                  <div class="bar flex emp">
+                    <div class="bar fill hidden1" id="b4" >
+                      <div class="tag bold flex a"><center>C++</center></div>
+                    </div>
+                    <br>
+                  </div>
+    
+
+                  <div class="bar flex emp">
+                    <div class="bar fill hidden5" id="b5">
+                      <div class="tag bold flex a"><center>Javascript</center></div>
+                    </div>
+                    <br>
+                  </div>
+                
+          </div>
+        </div>
+        <div class="row">
+          <div class="col foot">
+            <div class="hidden">
+                <center><h2>Let's Connect Together</h2></center>
+            </div>
+                <div class="foot_op">
+                  <center>
+                
+                <button  class="f1"><i class='bx bxl-instagram'></i></button>
+                <a class="con" href="https://www.linkedin.com/in/zakie-khan-640170252/">
+                <button class="f2"><i class='bx bxl-linkedin-square'></i></button>
+                </a>
+                <a class="con" href="https://github.com/zakie2003">
+                  <button class="f3"><i class='bx bxl-github'></i></button>
+                </a>
+                <button class="f4"><i class='bx bxl-gmail'></i></button>
+                  </center>
+                </div>
+              </div>
+        </div>
+      </div>
+      <script>
+        const observer=new IntersectionObserver((entries)=>{
+          entries.forEach((entry)=>{
+            console.log(entry)
+            if(entry.isIntersecting){
+              entry.target.classList.add('show');
+            }
+            else{
+              entry.target.classList.remove('show');
+            }
+          });
+        });
+       const hiddenelement=document.querySelectorAll(".hidden");
+       hiddenelement.forEach((el)=>observer.observe(el));
+
+
+       const observer1=new IntersectionObserver((entries)=>{
+          entries.forEach((entry)=>{
+            console.log(entry)
+            if(entry.isIntersecting){
+              entry.target.classList.add('show1');
+            }
+            else{
+              entry.target.classList.remove('show1');
+            }
+          });
+        });
+       const hiddenelement1=document.querySelectorAll(".hidden1");
+       hiddenelement1.forEach((el)=>observer1.observe(el));
+
+
+       const observer2=new IntersectionObserver((entries)=>{
+          entries.forEach((entry)=>{
+            console.log(entry)
+            if(entry.isIntersecting){
+              entry.target.classList.add('show2');
+            }
+            else{
+              entry.target.classList.remove('show2');
+            }
+          });
+        });
+       const hiddenelement2=document.querySelectorAll(".hidden2");
+       hiddenelement2.forEach((el)=>observer2.observe(el));
+
+
+       const observer3=new IntersectionObserver((entries)=>{
+          entries.forEach((entry)=>{
+            console.log(entry)
+            if(entry.isIntersecting){
+              entry.target.classList.add('show3');
+            }
+            else{
+              entry.target.classList.remove('show3');
+            }
+          });
+        });
+       const hiddenelement3=document.querySelectorAll(".hidden3");
+       hiddenelement3.forEach((el)=>observer3.observe(el));
+
+
+       const observer4=new IntersectionObserver((entries)=>{
+          entries.forEach((entry)=>{
+            console.log(entry)
+            if(entry.isIntersecting){
+              entry.target.classList.add('show4');
+            }
+            else{
+              entry.target.classList.remove('show4');
+            }
+          });
+        });
+       const hiddenelement4=document.querySelectorAll(".hidden4");
+       hiddenelement4.forEach((el)=>observer4.observe(el));
+
+
+       const observer5=new IntersectionObserver((entries)=>{
+          entries.forEach((entry)=>{
+            console.log(entry)
+            if(entry.isIntersecting){
+              entry.target.classList.add('show5');
+            }
+            else{
+              entry.target.classList.remove('show5');
+            }
+          });
+        });
+       const hiddenelement5=document.querySelectorAll(".hidden5");
+       hiddenelement5.forEach((el)=>observer5.observe(el));
+      </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
