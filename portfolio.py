@@ -20,7 +20,25 @@ def proj():
 def assign():
     if(request.method=="POST"):
         return render_template("cv_assign.html")
-    return("cv_assign.html")
+    return render_template("cv_assign.html")
+
+@app.route("/assign2",methods=["GET","POST"])
+def assign2():
+    if(request.method=="POST"):
+        return render_template("cv_assign2.html")
+    return render_template("cv_assign2.html")
+
+@app.route("/assign3",methods=["GET","POST"])
+def assign3():
+    if(request.method=="POST"):
+        return render_template("cv_assign3.html")
+    return render_template("cv_assign3.html")
+
+@app.route("/assign4",methods=["GET","POST"])
+def assign4():
+    if(request.method=="POST"):
+        return render_template("cv_assign4.html")
+    return render_template("cv_assign4.html")
 
 
 
