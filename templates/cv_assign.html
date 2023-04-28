@@ -50,9 +50,13 @@
         font-size: 24px;
       }
       .nav_op{
-        font-size: 50px;
+        font-size: 27px;
         position: relative;
-        margin-left: -25px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: -10px;
+        padding-right: 50px;
+        left: -40px;
         background-color: black;
         border-radius: 8px;
         color: aliceblue;
@@ -104,10 +108,47 @@
             background-color: black;
           }
 
-
-
-
-
+          .colc{
+    
+            border: 1px solid black;
+            background-image: linear-gradient(to right, #30cfd0 0%, #007ccf 100%);
+            border-radius: 8px;
+            height: 90px;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            flex-wrap: wrap;
+            font-size: 30px;
+          }
+          .colc:hover{
+            background-image:linear-gradient(to right, #000000 0%, #000000 100%); ;
+            transition: 0.5s;
+          }
+          .colc:focus{
+            border: black;
+            background-image:linear-gradient(to right, #ffffff 0%, #ffffff 100%); ;
+            color: black;
+          }
+          .colp{
+            padding-top: 30px;
+            padding-bottom: 30px;
+          }
+          .coltag{
+            position: relative;
+            padding-top: 20px;
+          }
+          .b{
+            border: none;
+          }
+          .colc{
+            margin: 20px;
+          }
+          @media screen and (max-width: 1200px) {
+            .colc {
+              width: 100%;
+              margin-bottom: 30px;
+            }
+          }
 
 
 
@@ -121,14 +162,12 @@
               <button class="btn btn-dark btn1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class='bx bx-menu'></i></button>
               <img class="logo" src="https://t4.ftcdn.net/jpg/01/33/14/91/360_F_133149161_cZzY9SYCE9FjMOwMGRJ26W8OqMZx1opU.jpg" alt="">
               <a class="navbar-brand" href="#">Zakfolio</a>
-              <span class="res">
-              <button type="button" class="btn resumee btn-outline-success"><a href=""><i class='bx bxs-briefcase'></i>Resume</a></button>
-              </span>
+
               
             </div>
           </nav>
           </div>
-        </div>
+      </div>
         <div class="offcanvas offcanvas-start slide_base" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title slide_head" id="offcanvasWithBothOptionsLabel">Menu</h5>
@@ -136,23 +175,51 @@
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-              <ul class="slide_op">
+              <ul class="slide_op con">
                 <form action="/" method="post">
-                    <li class="nav-item nav_op">
-                      <button type="submit" class="btn"><i class='bx bx-home'></i>&nbsp; &nbsp; Home</button>
-                    </li>
+                  <button  type="submit" class="btn b"><li class="nav-item nav_op">&nbsp;<i class='bx bx-code-alt'></i>&nbsp;Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li></button>
                     </form>
                     <form action="/proj" method="post">
-                        <li class="nav-item nav_op">
-                          
-                            <button  type="submit" class="btn"><i class='bx bx-code-alt'></i>&nbsp; &nbsp; Project</button>
+                      <button  type="submit" class="btn b"><li class="nav-item nav_op">&nbsp;<i class='bx bx-code-alt'></i>&nbsp;Project&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li></button>
                           </form>
-                <li class="nav-item nav_op">
-                  <button type="button" class="btn"><i class='bx bx-book'></i>&nbsp; &nbsp; Books</button>
-                </li>
               </ul>
             </div>
           </div>
+          <center><h1>NAD ASSIGNMENTS</h1></center><br>
+          <center><h2>INTERNAL TEST SOLUTIONS NAVIGATION PAGE</h2></center>
+          <center>
+          <div class="row justify-content-around colp">
+            <form action="/assign2" method="post">
+          <button type="submit" class="col-8 colc">
+            
+            <div class="coltag">
+              Internal-1
+            </div>
+          </button>
+          </form>
+          
+        
+          <form action="/assign3" method="post">
+            <button type="submit" class="col-8 colc">
+              
+              <div class="coltag">
+                Internal-2
+              </div>
+            </button>
+            </form>
+            <form action="/assign4" method="post">
+              <button type="submit" class="col-8 colc">
+                
+                <div class="coltag">
+                  Internal-3
+                </div>
+              </button>
+              </form>
+          
+          </div>
+        </center>
+
+
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
           
 </body>
