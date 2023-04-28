@@ -14,6 +14,7 @@
           padding: 0;
           margin: 0;
           font-family:'Poppins';
+          scroll-behavior: smooth;
         }
         body{
           background-color: rgb(255, 255, 255);
@@ -57,14 +58,12 @@
           font-size: 24px;
         }
         .row1{
-          display: flex;
           background-image: linear-gradient(to right,#36d1dc , #5b86e5);
           border-radius: 5px;
           position: relative;
           text-align: center;
           margin-top:0px;
           margin-bottom: 10px;
-          width: 100%;
         }
         .row2{
           background-color: aliceblue;
@@ -75,9 +74,14 @@
           margin-bottom: 10px;
         }
         .nav_op{
-          font-size: 50px;
+          border: none;
+          font-size: 27px;
           position: relative;
-          margin-left: -25px;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          padding-left: 10px;
+          padding-right: 50px;
+          left: -40px;
           background-color: black;
           border-radius: 8px;
           color: aliceblue;
@@ -115,22 +119,23 @@
           margin-left: 5px;
         }
         .col h1{
-          margin-top: 30px;
-          margin-bottom: 30px;
+          margin: 30px;
           color: black;
           font-size: 30px;
         }
         .img2{ 
           position: relative;
           padding-left: 35px;
-          width: 103%;
-
+          margin-bottom: 10px;
+          width: 100%;
+          height: 200px;
           background-color: white;
         }
         .col h2{
           color: black;
           margin-top: 30px;
-          
+          margin-left: 160px;
+          margin-right: 160px;
           margin-bottom: 80px;
           font-size: 20px
         }
@@ -312,48 +317,13 @@
         .con{
           text-decoration: none;
         }
-        .p1,.p2{
-          font-size: 20px;
-          color: white;
+        .colp{
+          padding-top: 30px;
+          padding-bottom: 30px;
         }
-        @media only screen and (max-width: 500px) {
-          .p1,.p2{
-            font-size: 20px;
-          }
-          .img2{
-            bottom: 30px;
-            position: relative;
-            
-          }
-          .dom{
-            box-shadow: none;
-            margin-left: 0px;
-            padding-left: 2px;
-            padding-right: 2px;
-            margin-right: 13px;
-          }
-          .r{
-            position: relative;
-            left: 5px;
-          }
-          .slide_base{
-            width: 3px;
-          }
-          .emp{
-            padding-left: 20px;
-            padding-right: 20px;
-          }
-          .foot_op{
-            margin-left: -60px;
-          }
-          .foot h2{
-            margin-left: 10px;
-          }
-        }
-        @media only screen and (min-width: 700px){
-          .img2{
-            height: 200px;
-          }
+        .coltag{
+          position: relative;
+          padding-top: 20px;
         }
   </style>
   <body>
@@ -364,7 +334,6 @@
           <button class="btn btn-dark btn1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class='bx bx-menu'></i></button>
           <img class="logo" src="https://t4.ftcdn.net/jpg/01/33/14/91/360_F_133149161_cZzY9SYCE9FjMOwMGRJ26W8OqMZx1opU.jpg" alt="">
           <a class="navbar-brand" href="#">Zakfolio</a>
-
           
         </div>
       </nav>
@@ -379,22 +348,18 @@
         <div class="offcanvas-body">
           <ul class="slide_op">
             <form action="/proj" method="post">
-            <li class="nav-item nav_op">
+            
               
-                <button  type="submit" class="btn"><i class='bx bx-code-alt'></i>&nbsp; &nbsp; Project</button>
+                <button  type="submit" class="btn b"><li class="nav-item nav_op">&nbsp;<i class='bx bx-code-alt'></i>&nbsp;Project &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li></button>
               </form>
-            </li>
+            
             <form action="/assign" method="post">
-            <li class="nav-item nav_op">
-              <button type="submit" class="btn"><i class='bx bxs-copy-alt'></i>&nbsp; &nbsp; Assignments</button>
-            </li>
+              <button  type="submit" class="btn b"><li class="nav-item nav_op">&nbsp;<i class='bx bx-edit'></i>&nbsp;Assignment&nbsp;&nbsp;&nbsp;&nbsp;</li></button>
+              
             </form>
-            <li class="nav-item nav_op">
-              <button type="submit" class="btn"><i class='bx bx-trophy'></i>&nbsp; &nbsp; Achievments</button>
-            </li>
-            <li class="nav-item nav_op">
-            <button type="button" class="btn "><i class='bx bxs-briefcase'></i>&nbsp; &nbsp; Resume</button>
-            </li>
+            <button  type="submit" class="btn b"><li class="nav-item nav_op">&nbsp;<i class='bx bx-trophy'></i>&nbsp;Acheivement&nbsp;&nbsp;&nbsp;&nbsp;</li></button>
+            <button  type="submit" class="btn b"><li class="nav-item nav_op">&nbsp;<i class='bx bxs-briefcase'></i>&nbsp;Resumee&nbsp;&nbsp;&nbsp;&nbsp;</li></button>
+                 
           </ul>
         </div>
       </div>
@@ -415,8 +380,8 @@
           <div class="col">
             <center><img class="img2" src="https://mattfarley.ca/img/hero-devices.svg" alt=""></center>
             <div class="hidden">
-            <h1 class="p1">Hi,I'm Mohd Zakie Khan.</h2>
-            <h2 class="p2">I'm a Front-End Web-Devloper.I also have a keen intrest in becoming a Data Scientist.<br>Just an student who is a fresher and is has intrest in learning new things in field of Tech.<br><br>
+            <h1>Hi,I'm Mohd Zakie Khan.</h2>
+            <h2>I'm a Front-End Web-Devloper.I also have a keen intrest in becoming a Data Scientist.Just an student who is a fresher and is has intrest in learning new things in field of Tech.<br><br>
             Currently pursuing Mtech(IT) in Davv University at Department <br> <b>Internation Institute of Professional Studies</b>,Indore</h2>
           </div>
           </div>
@@ -425,11 +390,11 @@
           <div class="col dom">
                 <h1>Domain's worked on</h1>
                 
-                <div class="flex flex-50-gt-sm r waypoint bars-wrap animated comp slide-in-right .container-lg" data-animation="slide-in-right">
+                <div class="flex flex-50-gt-sm waypoint bars-wrap animated comp slide-in-right .container-lg" data-animation="slide-in-right">
                   <div class="bar flex emp">
                     
                     <div class="bar fill b1 hidden3">
-                      <div class="tag bold flex a "><center>Python</center></div>
+                      <div class="tag bold flex a"><center>Python</center></div>
                       
                     </div>
                     <br>
@@ -437,7 +402,7 @@
     
                   <div class="bar flex emp">
                     <div class="bar fill b2 bor hidden4">
-                      <div class="tag bold flex a "><center>CSS</center></div>
+                      <div class="tag bold flex a"><center>CSS</center></div>
                       
                     </div>
                     <br>
@@ -445,14 +410,14 @@
     
                   <div class="bar flex emp">
                     <div class="bar fill b3 hidden2" >
-                      <div class="tag bold flex a "><center>HTML</center></div>
+                      <div class="tag bold flex a"><center>HTML</center></div>
                     </div>
                     <br>
                   </div>
     
                   <div class="bar flex emp">
                     <div class="bar fill hidden1" id="b4" >
-                      <div class="tag bold flex a "><center>C++</center></div>
+                      <div class="tag bold flex a"><center>C++</center></div>
                     </div>
                     <br>
                   </div>
