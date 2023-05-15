@@ -40,6 +40,12 @@ def assign4():
         return render_template("cv_assign4.html")
     return render_template("cv_assign4.html")
 
+@app.route("/assign5",methods=["GET","POST"])
+def assign5():
+    if(request.method=="POST"):
+        return render_template("cv_assign5.html")
+    return render_template("cv_assign5.html")
+
 
 
 
