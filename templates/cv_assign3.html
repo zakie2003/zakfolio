@@ -145,11 +145,33 @@
             }
           }
 
-
+          #spinner_wrapper{
+            z-index: 9999;  
+            background-color: #000000; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            transition: 0.5s;
+           }
+           .spinner-border{
+             height: 60px;
+             width: 60px;
+           }
 
           
 </style>
 <body>
+  <div id="spinner_wrapper">
+    <div class="spinner-border text-info" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    </div>
     <div class="header">
         <nav class="navbar navbar-expand-lg ">
     
@@ -183,18 +205,18 @@
           <center><h1>NAD ASSIGNMENTS</h1></center><br>
           <center><h2>INTERNAL 2 TEST SOLUTIONS</h2></center>
           <div class="row justify-content-around colp">
-          <a class="col-4 colc" href="https://youtu.be/mMN32hWLd1c">
+          <a class="col-4 colc" href="https://www.youtube.com/">
             <div class="coltag">
               Question.1-5
             </div>
           </a>
-          <a class="col-4 colc" href="https://youtu.be/qf1SpB1xCcw">
+          <a class="col-4 colc" href="https://www.youtube.com/">
             <div class="coltag">
               Question.6-10
             </div>
           </a>
           <div class="row justify-content-around colp">
-            <a class="col-4 colc" href="https://youtu.be/583bDYJw1GY">
+            <a class="col-4 colc" href="https://www.youtube.com/">
               <div class="coltag">
                 Question.11-15
               </div>
@@ -206,7 +228,12 @@
 
             </a>
           </div>
-
+          <script>
+            const spinner_wrapper1=document.getElementById("spinner_wrapper");
+            window.addEventListener("load",function(){
+             spinner_wrapper1.style.display="none";
+            })
+          </script>
 
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
           
