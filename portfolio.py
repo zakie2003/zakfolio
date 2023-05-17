@@ -45,7 +45,11 @@ def assign5():
     if(request.method=="POST"):
         return render_template("cv_assign5.html")
     return render_template("cv_assign5.html")
-
+@app.route("/assignop",methods=["GET","POST"])
+def proj_res():
+    if(request.method=="POST"):
+        return render_template("cv_res.html")
+    return render_template("cv_res.html")
 
 
 
